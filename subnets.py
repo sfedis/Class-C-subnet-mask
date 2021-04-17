@@ -1,16 +1,16 @@
 def single_mask(user_input):
 
     dist = 2**(32-user_input)
-    print(f"subnets: {(user_input-24)**2}")
+    print(f"subnets: {2**(user_input-24)}")
     print(f"hosts/subnet: {dist-2}")
-    print("subnet address (last buyte):", end=" ")
+    print("subnet address (last byte):", end=" ")
     i=0
     while (i<255):
         print(f"{i}", end=" ")
         i += dist
     print("")
     
-    print("broadcast address (last buyte):", end=" ")
+    print("broadcast address (last byte):", end=" ")
     j=0
     while (j<256):
         print(f"{j+dist-1}", end=" ")
